@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CuoiKiLTC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8f15e3a07e60aadf5a0c9de386225d54a1be360")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5cd03e0a452a397977accf66861499a2df99579")]
 [assembly: System.Reflection.AssemblyProductAttribute("CuoiKiLTC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CuoiKiLTC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
