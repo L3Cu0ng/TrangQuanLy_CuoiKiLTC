@@ -9,39 +9,147 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CuoiKiLTC
 build_property.RootNamespace = CuoiKiLTC
-build_property.ProjectDir = C:\Users\LECUONG\source\repos\CuoiKiLTC\
+build_property.ProjectDir = C:\Users\LECUONG\source\repos\TrangQuanLy_CuoiKiLTC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\LECUONG\source\repos\CuoiKiLTC
+build_property.MSBuildProjectDirectory = C:\Users\LECUONG\source\repos\TrangQuanLy_CuoiKiLTC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/LECUONG/source/repos/CuoiKiLTC/Views/Home/Index.cshtml]
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/Admins/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/Admins/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/Admins/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/Admins/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/Admins/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/BaiViets/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpVmlldHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/BaiViets/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpVmlldHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/BaiViets/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpVmlldHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/BaiViets/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpVmlldHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/BaiViets/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpVmlldHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/DangNhap/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuZ05oYXBcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LECUONG/source/repos/CuoiKiLTC/Views/Home/Privacy.cshtml]
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LECUONG/source/repos/CuoiKiLTC/Views/Shared/Error.cshtml]
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/Home/TrangChu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmFuZ0NodS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/LichTrinhs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljaFRyaW5oc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/LichTrinhs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljaFRyaW5oc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/LichTrinhs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljaFRyaW5oc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/LichTrinhs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljaFRyaW5oc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/LichTrinhs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljaFRyaW5oc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/NhanViens/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/NhanViens/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/NhanViens/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/NhanViens/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/NhanViens/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/PhongBans/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdCYW5zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/PhongBans/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdCYW5zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/PhongBans/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdCYW5zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/PhongBans/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdCYW5zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/PhongBans/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdCYW5zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LECUONG/source/repos/CuoiKiLTC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LECUONG/source/repos/CuoiKiLTC/Views/_ViewImports.cshtml]
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LECUONG/source/repos/CuoiKiLTC/Views/_ViewStart.cshtml]
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LECUONG/source/repos/CuoiKiLTC/Views/Shared/_Layout.cshtml]
+[C:/Users/LECUONG/source/repos/TrangQuanLy_CuoiKiLTC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-wlejsk3d7s

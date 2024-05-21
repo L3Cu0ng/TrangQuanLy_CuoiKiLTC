@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qWZDQgLqRpInz2pdc1B0Uiwi9XY73K0OeQNEmXejBNRB81OvnKbmP5ePisLdDIGtd3Va/l1sN/Fs8Ly8E0yzLw==",
+  "dgSpecHash": "oplrJVVF+kifnDeeqTN8w+zzps7dpEuPmGtzd8HPcuRw/bmuEnISmSW+Uc+yaYH0nBVfXcfJELtYP+LiXrH05A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LECUONG\\source\\repos\\CuoiKiLTC\\CuoiKiLTC.csproj",
+  "projectFilePath": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\CuoiKiLTC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LECUONG\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\LECUONG\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",

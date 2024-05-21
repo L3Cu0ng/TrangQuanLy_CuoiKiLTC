@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    bool isLoggedIn = User?.Identity?.IsAuthenticated ?? false;
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -20,12 +24,32 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="TrangChu">Trang Chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="nhanviens" asp-action="index">Nhân Viên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="baiviets" asp-action="index">Bài Viết</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="lichtrinhs" asp-action="index">Lịch Trình</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="phongbans" asp-action="index">Phòng Ban</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="admins" asp-action="Index">Admin</a>
                         </li>
                     </ul>
+                    <div class="navbar-nav">
+                        @if (isLoggedIn)
+                        {
+                            <form asp-controller="Admins" asp-action="Logout" method="post" class="form-inline">
+                                <button type="submit" class="btn btn-danger">Đăng xuất</button>
+                            </form>
+                        }
+                    </div>
                 </div>
             </div>
         </nav>

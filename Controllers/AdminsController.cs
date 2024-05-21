@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CuoiKiLTC.Models;
 
@@ -21,15 +19,13 @@ namespace CuoiKiLTC.Controllers
         // GET: Admins
         public async Task<IActionResult> Index()
         {
-              return _context.Admins != null ? 
-                          View(await _context.Admins.ToListAsync()) :
-                          Problem("Entity set 'QuanLyCongTyContext.Admins'  is null.");
+            return View(await _context.Admins.ToListAsync());
         }
 
         // GET: Admins/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Admins == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -51,8 +47,6 @@ namespace CuoiKiLTC.Controllers
         }
 
         // POST: Admins/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,UserName,PasswordHash")] Admin admin)
@@ -69,7 +63,7 @@ namespace CuoiKiLTC.Controllers
         // GET: Admins/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Admins == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -83,8 +77,6 @@ namespace CuoiKiLTC.Controllers
         }
 
         // POST: Admins/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,UserName,PasswordHash")] Admin admin)
@@ -120,7 +112,7 @@ namespace CuoiKiLTC.Controllers
         // GET: Admins/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Admins == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -140,23 +132,52 @@ namespace CuoiKiLTC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Admins == null)
-            {
-                return Problem("Entity set 'QuanLyCongTyContext.Admins'  is null.");
-            }
             var admin = await _context.Admins.FindAsync(id);
-            if (admin != null)
-            {
-                _context.Admins.Remove(admin);
-            }
-            
+            _context.Admins.Remove(admin);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool AdminExists(int id)
         {
-          return (_context.Admins?.Any(e => e.Id == id)).GetValueOrDefault();
+            return _context.Admins.Any(e => e.Id == id);
         }
+
+        // GET: Admins/Login
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        // POST: Admins/Login
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var admin = await _context.Admins.FirstOrDefaultAsync(a => a.UserName == model.Username && a.PasswordHash == model.Password);
+                if (admin != null)
+                {
+                    // Đăng nhập thành công, thực hiện các thao tác cần thiết như lưu thông tin đăng nhập vào session và chuyển hướng đến trang chính
+                    return RedirectToAction("TrangChu", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không đúng.");
+                    return View("Index", model);
+                }
+            }
+            return View(model);
+        }
+        // GET: Admins/Logout
+        public IActionResult Logout()
+        {
+            // Xử lý đăng xuất ở đây, ví dụ như xóa thông tin đăng nhập khỏi session
+
+            // Sau khi đăng xuất, chuyển hướng người dùng đến trang đăng nhập
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }

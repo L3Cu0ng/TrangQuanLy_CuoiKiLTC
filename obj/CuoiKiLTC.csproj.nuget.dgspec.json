@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LECUONG\\source\\repos\\CuoiKiLTC\\CuoiKiLTC.csproj": {}
+    "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\CuoiKiLTC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LECUONG\\source\\repos\\CuoiKiLTC\\CuoiKiLTC.csproj": {
+    "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\CuoiKiLTC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LECUONG\\source\\repos\\CuoiKiLTC\\CuoiKiLTC.csproj",
+        "projectUniqueName": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\CuoiKiLTC.csproj",
         "projectName": "CuoiKiLTC",
-        "projectPath": "C:\\Users\\LECUONG\\source\\repos\\CuoiKiLTC\\CuoiKiLTC.csproj",
+        "projectPath": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\CuoiKiLTC.csproj",
         "packagesPath": "C:\\Users\\LECUONG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LECUONG\\source\\repos\\CuoiKiLTC\\obj\\",
+        "outputPath": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,4 +1,4 @@
-using CuoiKiLTC.Models; // Import the namespace containing QuanLyCongTyContext
+﻿using CuoiKiLTC.Models; // Import the namespace containing QuanLyCongTyContext
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,8 +15,8 @@ builder.Services.AddDbContext<QuanLyCongTyContext>(options =>
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
-        options.LoginPath = "/Account/Login";
-        options.LogoutPath = "/Account/Logout";
+        options.LoginPath = "/Login";
+        options.LogoutPath = "/Login";
     });
 
 var app = builder.Build();
@@ -37,8 +37,23 @@ app.UseRouting();
 app.UseAuthentication(); // Use Authentication Middleware
 app.UseAuthorization();  // Use Authorization Middleware
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "login",
+        pattern: "login",
+        defaults: new { controller = "Admins", action = "Login" });
+
+    // Route mặc định
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(
+        name: "logout",
+        pattern: "logout",
+        defaults: new { controller = "Admins", action = "Logout" }
+        );
+});
+
 
 app.Run();
