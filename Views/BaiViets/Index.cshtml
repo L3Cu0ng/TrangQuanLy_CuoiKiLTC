@@ -9,6 +9,16 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<div>
+    <form asp-action="Index" method="get">
+        <p>
+            <input type="text" name="searchString" value="@ViewData["CurrentFilter"]" placeholder="Search..." />
+            <input type="submit" value="Search" />
+        </p>
+    </form>
+</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -25,41 +35,42 @@
                 @Html.DisplayNameFor(model => model.TacGia)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Admin)
+                @Html.DisplayNameFor(model => model.Admin.UserName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TheLoai)
+                @Html.DisplayNameFor(model => model.TheLoai.TenTheLoai)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TieuDe)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NoiDung)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NgayDang)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TacGia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Admin.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TheLoai.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TieuDe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoiDung)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayDang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TacGia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Admin.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -19,10 +19,23 @@ namespace CuoiKiLTC.Controllers
         }
 
         // GET: LichTrinhs
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var quanLyCongTyContext = _context.LichTrinhs.Include(l => l.Admin);
-            return View(await quanLyCongTyContext.ToListAsync());
+            var lichTrinhs = from lt in _context.LichTrinhs
+                             select lt;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                lichTrinhs = lichTrinhs.Where(lt => lt.TieuDe.Contains(searchString) ||
+                                                     lt.NoiDung.Contains(searchString) ||
+                                                     lt.NgayBatDau.ToString().Contains(searchString) ||
+                                                     lt.NgayKetThuc.ToString().Contains(searchString) ||
+                                                     lt.Admin.UserName.Contains(searchString));
+            }
+
+            ViewData["CurrentFilter"] = searchString;
+
+            return View(await lichTrinhs.ToListAsync());
         }
 
         // GET: LichTrinhs/Details/5

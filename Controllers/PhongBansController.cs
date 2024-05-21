@@ -19,11 +19,20 @@ namespace CuoiKiLTC.Controllers
         }
 
         // GET: PhongBans
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-              return _context.PhongBans != null ? 
-                          View(await _context.PhongBans.ToListAsync()) :
-                          Problem("Entity set 'QuanLyCongTyContext.PhongBans'  is null.");
+            var phongBans = from pb in _context.PhongBans
+                            select pb;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                phongBans = phongBans.Where(pb => pb.TenPhongBan.Contains(searchString) ||
+                                                   pb.MoTa.Contains(searchString));
+            }
+
+            ViewData["CurrentFilter"] = searchString;
+
+            return View(await phongBans.ToListAsync());
         }
 
         // GET: PhongBans/Details/5

@@ -19,10 +19,23 @@ namespace CuoiKiLTC.Controllers
         }
 
         // GET: BaiViets
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var quanLyCongTyContext = _context.BaiViets.Include(b => b.Admin).Include(b => b.TheLoai);
-            return View(await quanLyCongTyContext.ToListAsync());
+            var baiViets = from bv in _context.BaiViets.Include(b => b.Admin).Include(b => b.TheLoai)
+                           select bv;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                baiViets = baiViets.Where(bv => bv.TieuDe.Contains(searchString) ||
+                                                bv.NoiDung.Contains(searchString) ||
+                                                bv.TacGia.Contains(searchString) ||
+                                                bv.Admin.UserName.Contains(searchString) ||
+                                                bv.TheLoai.TenTheLoai.Contains(searchString));
+            }
+
+            ViewData["CurrentFilter"] = searchString;
+
+            return View(await baiViets.ToListAsync());
         }
 
         // GET: BaiViets/Details/5

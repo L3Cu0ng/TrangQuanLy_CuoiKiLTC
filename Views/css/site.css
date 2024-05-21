@@ -1,0 +1,17 @@
+﻿
+/* Add some custom styling to your site */
+.jumbotron {
+    
+    background-size: cover;
+    color: white;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
