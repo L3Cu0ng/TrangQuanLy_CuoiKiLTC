@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\wwwroot\\hinhanh\\image1.jpg",
+      "PackagePath": "staticwebassets\\hinhanh\\image1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\wwwroot\\hinhanh\\img2.jpg",
+      "PackagePath": "staticwebassets\\hinhanh\\img2.jpg"
+    },
+    {
       "Id": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
