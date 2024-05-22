@@ -18,17 +18,17 @@ namespace CuoiKiLTC.Controllers
             _logger = logger;
             _context = context;
         }
-
+        [HttpGet("/")]
         public IActionResult Index()
         {
             return View();
         }
-
+        [HttpGet("/Privacy")]
         public IActionResult Privacy()
         {
             return View();
         }
-
+        [HttpGet("/TrangChu")]
         public async Task<IActionResult> TrangChu()
         {
             var viewModel = new HomeViewModel
@@ -43,6 +43,12 @@ namespace CuoiKiLTC.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        // Action method to render a view without using the shared layout
+        public IActionResult ViewWithoutLayout()
+        {
+            return View("Index", model: null); // Replace "ViewName" with the name of your view
         }
     }
 }

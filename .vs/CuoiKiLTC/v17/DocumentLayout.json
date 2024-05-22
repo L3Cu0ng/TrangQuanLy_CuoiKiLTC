@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\models\\baiviet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:models\\baiviet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\views\\baiviets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:views\\baiviets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\controllers\\baivietscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:controllers\\baivietscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,40 +11,16 @@
       "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:views\\baiviets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\views\\lichtrinhs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:views\\lichtrinhs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\views\\nhanviens\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:views\\nhanviens\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\models\\quanlycongtycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:models\\quanlycongtycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\controllers\\nhanvienscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:controllers\\nhanvienscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\views\\baiviets\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:views\\baiviets\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\views\\home\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:views\\home\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\views\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:views\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\views\\nhanviens\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:views\\nhanviens\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|c:\\users\\lecuong\\source\\repos\\trangquanly_cuoikiltc\\views\\baiviets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65DED231-3068-4426-A8A3-67C06A315AF2}|CuoiKiLTC.csproj|solutionrelative:views\\baiviets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,175 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\BaiViets\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\BaiViets\\Index.cshtml",
-              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\BaiViets\\Index.cshtml",
-              "RelativeToolTip": "Views\\BaiViets\\Index.cshtml",
-              "ViewState": "AQIAABoAAAAAAAAAAAAqwCgAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-21T16:22:37.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\LichTrinhs\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\LichTrinhs\\Index.cshtml",
-              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\LichTrinhs\\Index.cshtml",
-              "RelativeToolTip": "Views\\LichTrinhs\\Index.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAqwDsAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-21T15:53:55.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BaiVietsController.cs",
-              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Controllers\\BaiVietsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BaiVietsController.cs",
-              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Controllers\\BaiVietsController.cs",
-              "RelativeToolTip": "Controllers\\BaiVietsController.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAiwF4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T16:16:53.401Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\NhanViens\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\NhanViens\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\NhanViens\\Index.cshtml",
+              "RelativeToolTip": "Views\\NhanViens\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-22T03:19:26.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\BaiViets\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\BaiViets\\Create.cshtml",
-              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\BaiViets\\Create.cshtml",
-              "RelativeToolTip": "Views\\BaiViets\\Create.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAC4AAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-21T16:22:59.933Z",
+              "DocumentIndex": 3,
+              "Title": "NhanViensController.cs",
+              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Controllers\\NhanViensController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NhanViensController.cs",
+              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Controllers\\NhanViensController.cs",
+              "RelativeToolTip": "Controllers\\NhanViensController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T03:16:27.607Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BaiViet.cs",
-              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Models\\BaiViet.cs",
-              "RelativeDocumentMoniker": "Models\\BaiViet.cs",
-              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Models\\BaiViet.cs",
-              "RelativeToolTip": "Models\\BaiViet.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAIA2wA4AAAAWAAAA",
+              "Title": "BaiVietsController.cs",
+              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Controllers\\BaiVietsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BaiVietsController.cs",
+              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Controllers\\BaiVietsController.cs",
+              "RelativeToolTip": "Controllers\\BaiVietsController.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAmwEMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T15:41:04.492Z",
+              "WhenOpened": "2024-05-22T03:15:46.976Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "QuanLyCongTyContext.cs",
-              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Models\\QuanLyCongTyContext.cs",
-              "RelativeDocumentMoniker": "Models\\QuanLyCongTyContext.cs",
-              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Models\\QuanLyCongTyContext.cs",
-              "RelativeToolTip": "Models\\QuanLyCongTyContext.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAnwB0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T16:15:14.129Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\BaiViets\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\BaiViets\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\BaiViets\\Edit.cshtml",
-              "RelativeToolTip": "Views\\BaiViets\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-21T16:22:56.128Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\BaiViets\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\BaiViets\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\BaiViets\\Index.cshtml",
+              "RelativeToolTip": "Views\\BaiViets\\Index.cshtml",
+              "ViewState": "AQIAADsAAAAAAAAAAAAmwEwAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-21T15:08:33.183Z",
+              "WhenOpened": "2024-05-22T03:15:45.211Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-21T15:07:58.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TrangChu.cshtml",
-              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\Home\\TrangChu.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\TrangChu.cshtml",
-              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\Home\\TrangChu.cshtml",
-              "RelativeToolTip": "Views\\Home\\TrangChu.cshtml",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAiwBoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-21T15:08:33.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\css\\site.css",
-              "RelativeDocumentMoniker": "Views\\css\\site.css",
-              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\css\\site.css",
-              "RelativeToolTip": "Views\\css\\site.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-21T15:28:43.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HomeViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\ViewModel\\HomeViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\HomeViewModel.cs",
-              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\ViewModel\\HomeViewModel.cs",
-              "RelativeToolTip": "ViewModel\\HomeViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T15:12:24.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\NhanViens\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\NhanViens\\Create.cshtml",
-              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\NhanViens\\Create.cshtml",
-              "RelativeToolTip": "Views\\NhanViens\\Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\BaiViets\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\BaiViets\\Create.cshtml",
+              "ToolTip": "C:\\Users\\LECUONG\\source\\repos\\TrangQuanLy_CuoiKiLTC\\Views\\BaiViets\\Create.cshtml",
+              "RelativeToolTip": "Views\\BaiViets\\Create.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-21T15:07:52.341Z",
+              "WhenOpened": "2024-05-22T03:15:42.559Z",
               "EditorCaption": ""
             }
           ]

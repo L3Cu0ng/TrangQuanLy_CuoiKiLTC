@@ -22,11 +22,50 @@ namespace CuoiKiLTC.Controllers
         }
 
         // GET: BaiViets
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString, string searchCategory)
         {
-            var quanLyCongTyContext = _context.BaiViets.Include(b => b.Admin).Include(b => b.TheLoai);
-            return View(await quanLyCongTyContext.ToListAsync());
+            // IQueryable to hold the filtered and included data
+            IQueryable<BaiViet> baiViets;
+
+            // Eagerly load related entities if needed
+            baiViets = _context.BaiViets.Include(bv => bv.Admin)
+                                         .Include(bv => bv.TheLoai);
+
+            // Filter by search string and search category (if applicable)
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                switch (searchCategory)
+                {
+                    case "TieuDe":
+                        baiViets = baiViets.Where(bv => bv.TieuDe.Contains(searchString));
+                        break;
+                    case "NoiDung":
+                        baiViets = baiViets.Where(bv => bv.NoiDung.Contains(searchString));
+                        break;
+                    case "NgayDang":
+                        // Assuming NgayDang is a DateTime property, you might need to handle it differently
+                        break;
+                    case "TacGia":
+                        baiViets = baiViets.Where(bv => bv.TacGia.Contains(searchString));
+                        break;
+                    case "TenTheLoai":
+                        baiViets = baiViets.Where(bv => bv.TheLoai.TenTheLoai.Contains(searchString));
+                        break;
+                    default:
+                        // Default search by TieuDe
+                        baiViets = baiViets.Where(bv => bv.TieuDe.Contains(searchString));
+                        break;
+                }
+            }
+
+            // Pass the current filter values to the view
+            ViewData["CurrentFilter"] = searchString;
+            ViewData["CurrentCategory"] = searchCategory;
+
+            // Execute the query asynchronously and return the view
+            return View(await baiViets.ToListAsync());
         }
+
 
         // GET: BaiViets/Details/5
         public async Task<IActionResult> Details(int? id)

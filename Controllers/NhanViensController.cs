@@ -19,25 +19,53 @@ namespace CuoiKiLTC.Controllers
         }
 
         // GET: NhanViens
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string searchString, string searchCategory)
         {
-            var nhanViens = from nv in _context.NhanViens.Include(n => n.PhongBan)
-                            select nv;
+            // IQueryable to hold the filtered and included data
+            IQueryable<CuoiKiLTC.Models.NhanVien> nhanViens;
 
-            if (!String.IsNullOrEmpty(searchString))
+            // Eagerly load PhongBan navigation property (assuming one-to-many relationship)
+            nhanViens = _context.NhanViens.Include(nv => nv.PhongBan);
+
+            // Filter by search string and search category (if applicable)
+            if (!string.IsNullOrEmpty(searchString))
             {
-                nhanViens = nhanViens.Where(nv => nv.HoTen.Contains(searchString) ||
-                                                   nv.SoDienThoai.Contains(searchString) ||
-                                                   nv.Email.Contains(searchString) ||
-                                                   nv.DiaChi.Contains(searchString) ||
-                                                   nv.ChucVu.Contains(searchString) ||
-                                                   nv.PhongBan.TenPhongBan.Contains(searchString));
+                switch (searchCategory)
+                {
+                    case "HoTen":
+                        nhanViens = nhanViens.Where(nv => nv.HoTen.Contains(searchString));
+                        break;
+                    case "SoDienThoai":
+                        nhanViens = nhanViens.Where(nv => nv.SoDienThoai.Contains(searchString));
+                        break;
+                    case "Email":
+                        nhanViens = nhanViens.Where(nv => nv.Email.Contains(searchString));
+                        break;
+                    case "DiaChi":
+                        nhanViens = nhanViens.Where(nv => nv.DiaChi.Contains(searchString));
+                        break;
+                    case "ChucVu":
+                        nhanViens = nhanViens.Where(nv => nv.ChucVu.Contains(searchString));
+                        break;
+                    case "TenPhongBan":
+                        nhanViens = nhanViens.Where(nv => nv.PhongBan.TenPhongBan.Contains(searchString));
+                        break;
+                    default:
+                        // Default search by HoTen
+                        nhanViens = nhanViens.Where(nv => nv.HoTen.Contains(searchString));
+                        break;
+                }
             }
 
+            // Pass the current filter values to the view
             ViewData["CurrentFilter"] = searchString;
+            ViewData["CurrentCategory"] = searchCategory;
 
+            // Execute the query asynchronously and return the view
             return View(await nhanViens.ToListAsync());
         }
+
+
 
         // GET: NhanViens/Details/5
         public async Task<IActionResult> Details(int? id)
