@@ -5,7 +5,8 @@ Bước 1: Truy cập vào đường dẫn cần clone
 
 Bước 2: Chuột phải ở nơi bất kì, chọn "Open Git Bash Here" ![image](https://github.com/L3Cu0ng/TrangQuanLy_CuoiKiLTC/assets/146750962/911c70a6-5ec9-4346-af51-8a04bf498c14)
 
-Bước 3: Nhập lệnh git clone https://github.com/L3Cu0ng/TrangQuanLy_CuoiKiLTC.git trong CMD của git ![image](https://github.com/L3Cu0ng/TrangQuanLy_CuoiKiLTC/assets/146750962/c999c253-e38a-442d-aaa5-a1d9fe1fd0a1)
+Bước 3: Nhập lệnh git clone https://github.com/L3Cu0ng/TrangQuanLy_CuoiKiLTC.git trong CMD của git ![image](https://github.com/L3Cu0ng/TrangQuanLy_CuoiKiLTC/assets/146750962/4b199f48-24e0-4891-a064-fab48a960493)
+
 
 Bước 4: Truy cập vào dự án và chạy file QuanLyCongTy.sql để thêm cơ sở dữ liệu vào SQL Server ![image](https://github.com/L3Cu0ng/TrangQuanLy_CuoiKiLTC/assets/146750962/a9fec9fd-e3d8-4716-a95d-f873c8cd203c)
 
