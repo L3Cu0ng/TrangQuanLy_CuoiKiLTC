@@ -19,16 +19,30 @@ namespace CuoiKiLTC.Controllers
         }
 
         // GET: NhanViens
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var quanLyCongTyContext = _context.NhanViens.Include(n => n.PhongBan);
-            return View(await quanLyCongTyContext.ToListAsync());
+            var nhanViens = from nv in _context.NhanViens.Include(n => n.PhongBan)
+                            select nv;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                nhanViens = nhanViens.Where(nv => nv.HoTen.Contains(searchString) ||
+                                                   nv.SoDienThoai.Contains(searchString) ||
+                                                   nv.Email.Contains(searchString) ||
+                                                   nv.DiaChi.Contains(searchString) ||
+                                                   nv.ChucVu.Contains(searchString) ||
+                                                   nv.PhongBan.TenPhongBan.Contains(searchString));
+            }
+
+            ViewData["CurrentFilter"] = searchString;
+
+            return View(await nhanViens.ToListAsync());
         }
 
         // GET: NhanViens/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.NhanViens == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -47,13 +61,11 @@ namespace CuoiKiLTC.Controllers
         // GET: NhanViens/Create
         public IActionResult Create()
         {
-            ViewData["PhongBanId"] = new SelectList(_context.PhongBans, "Id", "Id");
+            ViewData["PhongBanId"] = new SelectList(_context.PhongBans, "Id", "TenPhongBan");
             return View();
         }
 
         // POST: NhanViens/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,HoTen,SoDienThoai,Email,DiaChi,NgaySinh,ChucVu,PhongBanId")] NhanVien nhanVien)
@@ -64,14 +76,14 @@ namespace CuoiKiLTC.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PhongBanId"] = new SelectList(_context.PhongBans, "Id", "Id", nhanVien.PhongBanId);
+            ViewData["PhongBanId"] = new SelectList(_context.PhongBans, "Id", "TenPhongBan", nhanVien.PhongBanId);
             return View(nhanVien);
         }
 
         // GET: NhanViens/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.NhanViens == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -81,13 +93,11 @@ namespace CuoiKiLTC.Controllers
             {
                 return NotFound();
             }
-            ViewData["PhongBanId"] = new SelectList(_context.PhongBans, "Id", "Id", nhanVien.PhongBanId);
+            ViewData["PhongBanId"] = new SelectList(_context.PhongBans, "Id", "TenPhongBan", nhanVien.PhongBanId);
             return View(nhanVien);
         }
 
         // POST: NhanViens/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,HoTen,SoDienThoai,Email,DiaChi,NgaySinh,ChucVu,PhongBanId")] NhanVien nhanVien)
@@ -117,14 +127,14 @@ namespace CuoiKiLTC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PhongBanId"] = new SelectList(_context.PhongBans, "Id", "Id", nhanVien.PhongBanId);
+            ViewData["PhongBanId"] = new SelectList(_context.PhongBans, "Id", "TenPhongBan", nhanVien.PhongBanId);
             return View(nhanVien);
         }
 
         // GET: NhanViens/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.NhanViens == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -145,23 +155,15 @@ namespace CuoiKiLTC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.NhanViens == null)
-            {
-                return Problem("Entity set 'QuanLyCongTyContext.NhanViens'  is null.");
-            }
             var nhanVien = await _context.NhanViens.FindAsync(id);
-            if (nhanVien != null)
-            {
-                _context.NhanViens.Remove(nhanVien);
-            }
-            
+            _context.NhanViens.Remove(nhanVien);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool NhanVienExists(int id)
         {
-          return (_context.NhanViens?.Any(e => e.Id == id)).GetValueOrDefault();
+            return _context.NhanViens.Any(e => e.Id == id);
         }
     }
 }

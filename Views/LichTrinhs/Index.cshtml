@@ -1,0 +1,70 @@
+﻿@model IEnumerable<CuoiKiLTC.Models.LichTrinh>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div>
+    <form asp-action="Index" method="get">
+        <p>
+            <input type="text" name="searchString" value="@ViewData["CurrentFilter"]" placeholder="Search..." />
+            <input type="submit" value="Search" />
+        </p>
+    </form>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TieuDe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NoiDung)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayBatDau)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayKetThuc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Admin.UserName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TieuDe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoiDung)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayBatDau)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayKetThuc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Admin.UserName)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

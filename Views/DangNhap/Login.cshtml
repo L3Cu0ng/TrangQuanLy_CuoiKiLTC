@@ -1,0 +1,19 @@
+﻿@model CuoiKiLTC.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Đăng nhập";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Đường dẫn đến layout mặc định
+}
+
+<h1>Đăng nhập</h1>
+
+<form asp-controller="Admins" asp-action="Login" method="post">
+    <div class="form-group">
+        <label for="username">Tên đăng nhập:</label>
+        <input type="text" id="username" name="Username" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="Password" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Đăng nhập</button>
+</form>
