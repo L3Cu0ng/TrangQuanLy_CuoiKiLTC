@@ -1,6 +1,8 @@
 ﻿using CuoiKiLTC.Models; // Import the namespace containing QuanLyCongTyContext
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using CuoiKiLTC.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,22 +12,27 @@ builder.Services.AddControllersWithViews();
 // Add DbContext with SQL Server
 builder.Services.AddDbContext<QuanLyCongTyContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<AuthService>();
+
 
 // Add Authentication
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
         options.LoginPath = "/Login";
-        options.LogoutPath = "/Login";
     });
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -39,11 +46,7 @@ app.UseAuthorization();  // Use Authorization Middleware
 
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapControllerRoute(
-        name: "login",
-        pattern: "login",
-        defaults: new { controller = "Admins", action = "Login" });
-
+   
     // Route mặc định
     endpoints.MapControllerRoute(
         name: "default",

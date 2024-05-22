@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
+using System.IO;
 using CuoiKiLTC.Models;
 
 namespace CuoiKiLTC.Controllers
@@ -12,6 +14,7 @@ namespace CuoiKiLTC.Controllers
     public class BaiVietsController : Controller
     {
         private readonly QuanLyCongTyContext _context;
+        private readonly string _imageFolderPath = "wwwroot/hinhanh";
 
         public BaiVietsController(QuanLyCongTyContext context)
         {
@@ -19,24 +22,50 @@ namespace CuoiKiLTC.Controllers
         }
 
         // GET: BaiViets
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string searchString, string searchCategory)
         {
-            var baiViets = from bv in _context.BaiViets.Include(b => b.Admin).Include(b => b.TheLoai)
-                           select bv;
+            // IQueryable to hold the filtered and included data
+            IQueryable<BaiViet> baiViets;
 
-            if (!String.IsNullOrEmpty(searchString))
+            // Eagerly load related entities if needed
+            baiViets = _context.BaiViets.Include(bv => bv.Admin)
+                                         .Include(bv => bv.TheLoai);
+
+            // Filter by search string and search category (if applicable)
+            if (!string.IsNullOrEmpty(searchString))
             {
-                baiViets = baiViets.Where(bv => bv.TieuDe.Contains(searchString) ||
-                                                bv.NoiDung.Contains(searchString) ||
-                                                bv.TacGia.Contains(searchString) ||
-                                                bv.Admin.UserName.Contains(searchString) ||
-                                                bv.TheLoai.TenTheLoai.Contains(searchString));
+                switch (searchCategory)
+                {
+                    case "TieuDe":
+                        baiViets = baiViets.Where(bv => bv.TieuDe.Contains(searchString));
+                        break;
+                    case "NoiDung":
+                        baiViets = baiViets.Where(bv => bv.NoiDung.Contains(searchString));
+                        break;
+                    case "NgayDang":
+                        // Assuming NgayDang is a DateTime property, you might need to handle it differently
+                        break;
+                    case "TacGia":
+                        baiViets = baiViets.Where(bv => bv.TacGia.Contains(searchString));
+                        break;
+                    case "TenTheLoai":
+                        baiViets = baiViets.Where(bv => bv.TheLoai.TenTheLoai.Contains(searchString));
+                        break;
+                    default:
+                        // Default search by TieuDe
+                        baiViets = baiViets.Where(bv => bv.TieuDe.Contains(searchString));
+                        break;
+                }
             }
 
+            // Pass the current filter values to the view
             ViewData["CurrentFilter"] = searchString;
+            ViewData["CurrentCategory"] = searchCategory;
 
+            // Execute the query asynchronously and return the view
             return View(await baiViets.ToListAsync());
         }
+
 
         // GET: BaiViets/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -67,22 +96,42 @@ namespace CuoiKiLTC.Controllers
         }
 
         // POST: BaiViets/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TieuDe,NoiDung,NgayDang,TacGia,TheLoaiId,AdminId")] BaiViet baiViet)
+        public async Task<IActionResult> Create([Bind("Id,TieuDe,NoiDung,NgayDang,TacGia,TheLoaiId,AdminId")] BaiViet baiViet, IFormFile HinhAnh)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(baiViet);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    if (HinhAnh != null && HinhAnh.Length > 0)
+                    {
+                        var fileName = Path.GetFileName(HinhAnh.FileName);
+                        var filePath = Path.Combine(_imageFolderPath, fileName);
+
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await HinhAnh.CopyToAsync(stream);
+                        }
+
+                        baiViet.HinhAnhUrl = "/hinhanh/" + fileName;
+                    }
+
+                    _context.Add(baiViet);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex)
+                {
+                    // Xử lý lỗi tại đây
+                    ModelState.AddModelError(string.Empty, "Đã xảy ra lỗi khi tải lên ảnh: " + ex.Message);
+                }
             }
             ViewData["AdminId"] = new SelectList(_context.Admins, "Id", "Id", baiViet.AdminId);
             ViewData["TheLoaiId"] = new SelectList(_context.TheLoais, "Id", "Id", baiViet.TheLoaiId);
             return View(baiViet);
         }
+
 
         // GET: BaiViets/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -103,11 +152,9 @@ namespace CuoiKiLTC.Controllers
         }
 
         // POST: BaiViets/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,TieuDe,NoiDung,NgayDang,TacGia,TheLoaiId,AdminId")] BaiViet baiViet)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,TieuDe,NoiDung,NgayDang,TacGia,TheLoaiId,AdminId,HinhAnhUrl")] BaiViet baiViet, IFormFile HinhAnh)
         {
             if (id != baiViet.Id)
             {
@@ -118,6 +165,19 @@ namespace CuoiKiLTC.Controllers
             {
                 try
                 {
+                    if (HinhAnh != null && HinhAnh.Length > 0)
+                    {
+                        var fileName = Path.GetFileName(HinhAnh.FileName);
+                        var filePath = Path.Combine(_imageFolderPath, fileName);
+
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await HinhAnh.CopyToAsync(stream);
+                        }
+
+                        baiViet.HinhAnhUrl = "/hinhanh/" + fileName;
+                    }
+
                     _context.Update(baiViet);
                     await _context.SaveChangesAsync();
                 }
@@ -173,14 +233,14 @@ namespace CuoiKiLTC.Controllers
             {
                 _context.BaiViets.Remove(baiViet);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool BaiVietExists(int id)
         {
-          return (_context.BaiViets?.Any(e => e.Id == id)).GetValueOrDefault();
+            return _context.BaiViets.Any(e => e.Id == id);
         }
     }
 }

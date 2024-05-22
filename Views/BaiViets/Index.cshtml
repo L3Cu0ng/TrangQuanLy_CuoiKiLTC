@@ -13,6 +13,13 @@
 <div>
     <form asp-action="Index" method="get">
         <p>
+            <select name="searchCategory">
+                <option value="TieuDe">Tiêu đề</option>
+                <option value="NoiDung">Nội dung</option>
+                <option value="NgayDang">Ngày đăng</option>
+                <option value="TacGia">Tác giả</option>
+                <option value="TenTheLoai">Tên thể loại</option>
+            </select>
             <input type="text" name="searchString" value="@ViewData["CurrentFilter"]" placeholder="Search..." />
             <input type="submit" value="Search" />
         </p>
@@ -23,22 +30,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.TieuDe)
+                Tiêu đề
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NoiDung)
+                Nội dung
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NgayDang)
+                Ngày đăng
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TacGia)
+                Tác giả
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Admin.UserName)
+                Tên thể loại
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TheLoai.TenTheLoai)
+                Hình ảnh
             </th>
             <th></th>
         </tr>
@@ -60,10 +67,10 @@
                     @Html.DisplayFor(modelItem => item.TacGia)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Admin.UserName)
+                    @Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)
+                    <img src="@item.HinhAnhUrl" alt="Image" style="max-width: 100px; max-height: 100px;" />
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

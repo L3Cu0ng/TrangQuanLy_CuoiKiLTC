@@ -572,3 +572,4 @@ C:\Users\LECUONG\source\repos\TrangQuanLy_CuoiKiLTC\obj\Debug\net6.0\refint\Cuoi
 C:\Users\LECUONG\source\repos\TrangQuanLy_CuoiKiLTC\obj\Debug\net6.0\CuoiKiLTC.pdb
 C:\Users\LECUONG\source\repos\TrangQuanLy_CuoiKiLTC\obj\Debug\net6.0\CuoiKiLTC.genruntimeconfig.cache
 C:\Users\LECUONG\source\repos\TrangQuanLy_CuoiKiLTC\obj\Debug\net6.0\ref\CuoiKiLTC.dll
+C:\Users\LECUONG\source\repos\TrangQuanLy_CuoiKiLTC\bin\Debug\net6.0\BCrypt.Net-Next.dll
