@@ -1,4 +1,7 @@
 # TrangQuanLy_CuoiKi
+Tên: Lê Quang Bảo Cường
+Lớp học phần: 223LTC04
+Mã sinh viên: 21115053120108
 Hướng dẫn cách clone và chạy dự án:
 
 Bước 1: Truy cập vào đường dẫn cần clone
